@@ -1,0 +1,10 @@
+<h1><%= @actor.first_name + ' ' + @actor.last_name %></h1>
+
+<% if @actor.profile_pic.present? %>
+  <%= image_tag @actor.profile_pic, style: 'width: 50%'  %>
+<% else %>
+  <p>no profile pic</p>
+<% end%>
+<br>
+
+<%= link_to 'back to actors', actors_path %>
